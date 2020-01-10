@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.XboxController;
 public class OI {
 
 
-    private XboxController driveController, manipController;
+    public XboxController driveController, manipController;
 
     public OI() {
         initControllers();
