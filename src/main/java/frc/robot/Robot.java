@@ -2,7 +2,7 @@ package frc.robot;
 
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 /**
  * Don't change the name of this class since the VM is set up to run this
@@ -29,7 +29,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotPeriodic() {
-        Scheduler.getInstance().run();
+        CommandScheduler.getInstance().run();
     }
 
 
@@ -43,7 +43,6 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
-        Scheduler.getInstance().run();
     }
 
     /**
@@ -51,7 +50,6 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void teleopPeriodic() {
-        Scheduler.getInstance().run();
     }
 
     /**
@@ -59,6 +57,5 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void testPeriodic() {
-        Scheduler.getInstance().run();
     }
 }
