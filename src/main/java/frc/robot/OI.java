@@ -21,5 +21,14 @@ public class OI {
 
     }
 
+    private void configureBindings() {
+        //PUT YOUR COMMANDS in here! Default commands go first.  
+    }
+
+    public Command getAutonomousCommand() {
+        // AUTOS not PATHS in path planner should be called here
+        return new PathPlannerAuto("AutoName");
+    }
+
 
 }
