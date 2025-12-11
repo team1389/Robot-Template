@@ -4,30 +4,29 @@ import com.pathplanner.lib.commands.PathPlannerAuto;
 
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+
+//Import Subsystems and Command files Below
+
 
 public class OI {
+    //Define controller ports | DO NOT TOUCH |
+    final CommandXboxController manipController = new CommandXboxController(1);
+    final CommandXboxController driveController = new CommandXboxController(0);
 
+    //Define all subsystems using "IntakeSubsystem IntakeSubsystem = new IntakeSubsystem();"
+    //IntakeSubsystem IntakeSubsystem = new IntakeSubsystem();
 
-    public XboxController driveController, manipController;
-
+    //Creates Bindings for controllers
     public OI() {
-        initControllers();
-
+        configureBindings();
     }
 
-    /**
-     * Initialize JoystickButtons and Controllers
-     */
-    private void initControllers() {
-        //Just bc it says xbox controller, doesn't mean you have to use an xbox controller.
-        //Look at the raw inputs in driverstation and you can figure out what buttons to use. 
-        driveController = new XboxController(0);
-        manipController = new XboxController(1);
-    }
 
     private void configureBindings() {
         //PUT YOUR COMMANDS in here! Default commands go first.  
-        
+        //manipController.a().whileTrue(new Intake(IntakeSubsystem));
+
     }
 
     public Command getAutonomousCommand() {
